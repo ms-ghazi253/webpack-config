@@ -1,14 +1,15 @@
 const { sources } = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 let mode = "development";
-
+let target = "web";
 if (process.env.NODE_ENV === "production") {
     mode = "production";
+    target = "browerslist";
 }
 
 module.exports = {
     mode: mode,
-
+    target: target,
     module: {
         rules: [
             {
