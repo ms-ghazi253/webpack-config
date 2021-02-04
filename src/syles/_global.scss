@@ -1,5 +1,5 @@
 @use "variables";
-@import"hero";
+
 body {
     margin: 0;
     background-color: variables.$bg;
@@ -14,4 +14,7 @@ main{
 }
 button{
     font-size:1.5rem;
+}
+ul{
+    list-style-image:url("../images/depaset.jpg");
 }
