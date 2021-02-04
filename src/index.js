@@ -1,16 +1,4 @@
-import "./syles/index.scss"
-const elvenShieldRecipe = {
-    leatherStrips: 2,
-    ironIngot: 1,
-    refinedMoonstone: 4
-};
+import App from "./components/App"
+import { render } from "react-dom"
 
-const elvenGauntletsRecipe = {
-    ...elvenGauntletsRecipe,
-    leather: 1,
-    refinedMoonstone: 4,
-};
-
-console.log(elvenShieldRecipe);
-
-console.log(elvenGauntletsRecipe);
+render(<App/>, document.getElementById("root"));

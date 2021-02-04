@@ -13,7 +13,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /mode_modules/,
                 use: {
                     loader:"babel-loader",
@@ -26,7 +26,10 @@ module.exports = {
         ]
     },
 
-    plugins:[new MiniCssExtractPlugin()],
+    plugins: [new MiniCssExtractPlugin()],
+    resolve: {
+        extensions:[".js",".jsx"]
+    },
     devtool:"source-map",
     devServer: {
         contentBase: "./dist",
