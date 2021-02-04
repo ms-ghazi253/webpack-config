@@ -4,7 +4,7 @@ let mode = "development";
 let target = "web";
 if (process.env.NODE_ENV === "production") {
     mode = "production";
-    target = "browerslist";
+    target = "browserslist";
 }
 
 module.exports = {
@@ -22,7 +22,8 @@ module.exports = {
             {
                 test: /\.s?css$/i,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader" ],
-            }
+            },
+            
         ]
     },
 
